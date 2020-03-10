@@ -1,0 +1,273 @@
+{
+	"info": {
+		"_postman_id": "56889f64-0abf-4746-b04a-e32a3462cd19",
+		"name": "Prueba Segundo Examen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/api/employees/all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/employees/all",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"employees",
+						"all"
+					]
+				},
+				"description": "Muestra todos los empleados"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/employees/byid/:id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:3000/api/employees/byid/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"employees",
+						"byid",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "5c871f24fcc06c827a5818c6"
+						}
+					]
+				},
+				"description": "Busca un empleado por ID"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/employees/bycompany/:company",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/employees/bycompany/:company",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"employees",
+						"bycompany",
+						":company"
+					],
+					"variable": [
+						{
+							"key": "company",
+							"value": "STUCCO"
+						}
+					]
+				},
+				"description": "Filtra segun la compañia"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/employees/bytag/:tag",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/employees/bytag/:tag",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"employees",
+						"bytag",
+						":tag"
+					],
+					"variable": [
+						{
+							"key": "tag",
+							"value": "deserunt"
+						}
+					]
+				},
+				"description": "Filtra segun la tag proveida"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/employees/byagerange/:min/:max",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/employees/byagerange/:min/:max",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"employees",
+						"byagerange",
+						":min",
+						":max"
+					],
+					"variable": [
+						{
+							"key": "min",
+							"value": "20"
+						},
+						{
+							"key": "max",
+							"value": "25"
+						}
+					]
+				},
+				"description": "Muestra Empleados en un rango de edades"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/employees/addtag/:id",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "tag",
+							"value": "bonito",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/employees/addtag/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"employees",
+						"addtag",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "5c871f24fcc06c827a581918"
+						}
+					]
+				},
+				"description": "Agrega un tag en especifico a el id"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/employees/delete/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/employees/delete/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"employees",
+						"delete",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "5c871f24fcc06c827a581923"
+						}
+					]
+				},
+				"description": "Borra un empleado por su id"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/employees/makeolder",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "agedelta",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/employees/makeolder",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"employees",
+						"makeolder"
+					]
+				},
+				"description": "Agregar la cantidad determinada de años a todos los registros"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
